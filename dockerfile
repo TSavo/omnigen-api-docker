@@ -18,7 +18,7 @@ RUN cd OmniGen \
 COPY server.py /app
 COPY firsttime.py /app
 
-RUN pip uninstall torch torchvision torchaudio
+RUN pip uninstall -y torch torchvision torchaudio
 RUN pip install torch torchvision torchaudio
 
 RUN cd OmniGen && python3 ../firsttime.py
